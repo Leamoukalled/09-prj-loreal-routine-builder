@@ -1,0 +1,383 @@
+/* Fancy product card styles for L'Oréal Routine Builder - Elegant Colors */
+
+:root {
+  --loreal-gold: #c7a76c;
+  --loreal-blue: #1a237e;
+  --loreal-pink: #f8bbd0;
+  --loreal-white: #fff;
+  --loreal-bg: #f5f5f5;
+  --loreal-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+  background: var(--loreal-white);
+  border-radius: 18px;
+  box-shadow: var(--loreal-shadow);
+  margin: 18px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.product-card.selected {
+  border-color: var(--loreal-gold);
+  box-shadow: 0 6px 24px rgba(199, 167, 108, 0.18);
+  transform: scale(1.03);
+}
+.product-card.just-selected {
+  animation: pop 0.4s;
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
+.product-img-wrap {
+  flex: 0 0 80px;
+  margin-right: 18px;
+}
+.product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 2px solid var(--loreal-gold);
+}
+.product-info {
+  flex: 1;
+}
+.product-name {
+  margin: 0 0 6px 0;
+  font-size: 1.2em;
+  color: var(--loreal-blue);
+  font-weight: bold;
+}
+.product-brand {
+  margin: 0 0 4px 0;
+  color: #444;
+  font-size: 0.95em;
+}
+.product-category {
+  display: inline-block;
+  background: var(--loreal-gold);
+  color: var(--loreal-white);
+  border-radius: 8px;
+  padding: 2px 10px;
+  font-size: 0.85em;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.desc-toggle-btn {
+  background: var(--loreal-blue);
+  color: var(--loreal-white);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin: 8px 0 0 0;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+.desc-toggle-btn:hover {
+  background: var(--loreal-gold);
+  color: var(--loreal-blue);
+}
+.product-desc {
+  margin-top: 8px;
+  background: var(--loreal-pink);
+  border-radius: 8px;
+  padding: 10px;
+  color: var(--loreal-blue);
+  font-size: 0.95em;
+}
+.selected-product-item {
+  background: var(--loreal-gold);
+  color: var(--loreal-white);
+  border-radius: 10px;
+  padding: 8px 14px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(199, 167, 108, 0.1);
+}
+.remove-selected-btn {
+  background: var(--loreal-blue);
+  color: var(--loreal-white);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.remove-selected-btn:hover {
+  background: var(--loreal-gold);
+  color: var(--loreal-blue);
+}
+.clear-selected-btn {
+  background: var(--loreal-blue);
+  color: var(--loreal-white);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+.clear-selected-btn:hover {
+  background: var(--loreal-gold);
+  color: var(--loreal-blue);
+}
+/* Chat window styles */
+.chat-msg {
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin: 8px 0;
+  max-width: 80%;
+  word-break: break-word;
+}
+.chat-msg.user {
+  background: var(--loreal-blue);
+  color: var(--loreal-white);
+  align-self: flex-end;
+  font-weight: 500;
+}
+.chat-msg.ai {
+  background: var(--loreal-pink);
+  color: var(--loreal-blue);
+  align-self: flex-start;
+  font-weight: 500;
+}
+/* L'Oréal Brand Colors */
+:root {
+  --loreal-red: #ff003b;
+  --loreal-gold: #e3a535;
+  --loreal-bg: #fff8f5;
+  --loreal-text: #222;
+  --loreal-accent: #f7e7d9;
+  --loreal-border: #e3a535;
+}
+
+/* Base styles */
+body {
+  background: var(--loreal-bg);
+  color: var(--loreal-text);
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--loreal-red), var(--loreal-gold));
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255, 0, 59, 0.08);
+}
+
+/* Buttons */
+button {
+  background: var(--loreal-red);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0.5rem 0;
+}
+
+button:hover {
+  background: var(--loreal-gold);
+  color: var(--loreal-red);
+}
+
+/* Card style for routines/results */
+.card {
+  background: white;
+  border: 2px solid var(--loreal-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(227, 165, 53, 0.07);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 500px;
+}
+
+/* Product grid cards */
+.products-grid .product-card {
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(227, 165, 53, 0.07);
+  margin: 0.5rem;
+  padding: 1rem;
+  background: white;
+}
+
+/* Highlight selected product */
+.products-grid .product-card.selected {
+  border-color: var(--loreal-red);
+  box-shadow: 0 0 0 4px var(--loreal-red), 0 4px 16px rgba(227, 165, 53, 0.07);
+  background: #fff4f7;
+}
+
+/* Accent headings */
+h1,
+h2,
+h3 {
+  color: var(--loreal-red);
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  margin-top: 0;
+}
+
+h2 {
+  border-bottom: 2px solid var(--loreal-gold);
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  border: 1.5px solid var(--loreal-gold);
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Links */
+a {
+  color: var(--loreal-red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--loreal-gold);
+}
+
+/* Footer */
+footer {
+  background: var(--loreal-accent);
+  color: var(--loreal-red);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  border-top: 2px solid var(--loreal-gold);
+}
+
+/* Selected Products */
+.selected-products .selected-product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff8f5;
+  border: 1px solid var(--loreal-gold);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.selected-products .remove-selected-btn {
+  background: var(--loreal-red);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.2s;
+}
+
+.selected-products .remove-selected-btn:hover {
+  background: var(--loreal-gold);
+  color: var(--loreal-red);
+}
+
+/* Clear All button */
+.selected-products .clear-selected-btn {
+  background: var(--loreal-gold);
+  color: var(--loreal-red);
+  border: none;
+  border-radius: 24px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  transition: background 0.2s;
+}
+
+.selected-products .clear-selected-btn:hover {
+  background: var(--loreal-red);
+  color: #fff;
+}
+
+/* Description toggle button and area */
+.product-card .desc-toggle-btn {
+  background: var(--loreal-gold);
+  color: var(--loreal-red);
+  border: none;
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+
+.product-card .desc-toggle-btn:hover {
+  background: var(--loreal-red);
+  color: #fff;
+}
+
+.product-card .product-desc {
+  background: #fff8f5;
+  border: 1px solid var(--loreal-gold);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.98rem;
+  color: var(--loreal-text);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    padding: 1rem;
+    max-width: 95vw;
+  }
+  header {
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+  }
+}
